@@ -1,3 +1,3 @@
 # Personal Site
 
-See it here: [tompollak.me](tompollak.me)
+See it here: [tompollak.me](https://tompollak.me/)
