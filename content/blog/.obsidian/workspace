@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "c0989761f93f823d",
+    "type": "split",
+    "children": [
+      {
+        "id": "43f948e0b898e702",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "calc-place-probs/index.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "01c6538ee72dee51",
+    "type": "split",
+    "children": [
+      {
+        "id": "f443069b076d3b55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee40c86bcd11d59a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "3c1fafe6e89f5838",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "039398c2bfcae47c",
+    "type": "split",
+    "children": [
+      {
+        "id": "90906dcc4ce010d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1da62d534ec1dfca",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "calc-place-probs/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "43f948e0b898e702",
+  "lastOpenFiles": [
+    "calc-place-probs/index.md"
+  ]
+}

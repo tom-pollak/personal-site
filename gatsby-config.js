@@ -130,8 +130,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-katex`,
             options: {
-              strict: `ignore`,
-            },
+              strict: `ignore`
+            }
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -142,7 +142,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
