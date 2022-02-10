@@ -2,7 +2,8 @@ import { Link } from 'gatsby';
 import get from 'lodash/get';
 import React from 'react';
 
-import profileImg from '../../images/profile.jpg';
+import profileImg from '../../images/portrait.png';
+import {withPrefix} from "gatsby-link";
 
 const classes = {
   wrapper: 'block mb-6 md:flex',
@@ -21,6 +22,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
   const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
+  const cv = get(metadata, 'cv', false);
 
   return (
     <div className={classes.wrapper}>
@@ -64,6 +66,13 @@ const Header = ({ metadata = {}, noBlog = false }) => {
               <Link className={classes.link} to="/blog">
                 Blog
               </Link>
+            </li>
+          )}
+          {cv && (
+            <li className={classes.item}>
+              <a rel="noopener noreferrer" className={classes.link} href={withPrefix('/cv.pdf')} target="_blank">
+                CV
+              </a>
             </li>
           )}
         </ul>

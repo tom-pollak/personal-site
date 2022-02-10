@@ -1,75 +1,96 @@
 module.exports = {
   siteMetadata: {
-    // Site URL for when it goes live
-    siteUrl: `https://elastic-meninsky-aa7c74.netlify.app/`,
-    // Your Name
-    name: 'Ryan Fitzgerald',
-    // Main Site Title
-    title: `Ryan Fitzgerald | Full-Stack Developer`,
-    // Description that goes under your name in main bio
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit, ipsum.`,
-    // Optional: Twitter account handle
-    author: `@rfitzio`,
-    // Optional: Github account URL
-    github: `https://github.com/ryanfitzgerald`,
-    // Optional: LinkedIn account URL
-    linkedin: `https://www.linkedin.com/in/ryanafitzgerald/`,
-    // Content of the About Me section
-    about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
-    // Optional: List your projects, they must have `name` and `description`. `link` is optional.
-    projects: [
+    siteUrl: `https://tom-pollak.github.io/`,
+    name: 'Tom Pollak',
+    title: `Tom Pollak`,
+    description: `Studying Computer Science @ University of York
+    `,
+    author: ``,
+    github: `https://github.com/tom-pollak`,
+    linkedin: ``,
+    cv: `src/assets/cv.pdf`,
+    about: `A second year Computer Science student seeking a summer internship in software development or other related fields. I enjoy learning practically on projects and also enjoy researching topics independently. I am most proficient with Python but also have experience in JavaScript and Java. I also have many years of experience with Linux systems and Git version control.`,
+    education: [
       {
-        name: 'Devfolio',
-        description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        school: `University of York`,
+        degree: `BSc (Hons) Computer Science, 2023`,
+        link: `https://www.york.ac.uk/`,
       },
       {
-        name: 'ChromeExtensionKit',
-        description:
-          'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
-        link: 'https://chromeextensionkit.com/?ref=devfolio',
-      },
-      {
-        name: 'Another Cool Project',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        school: 'Lady Manners School',
+        degree:
+          'A-Levels: Further Maths (A), Maths (A), Physics (A), Computer Science (A)',
+        link: '',
       },
     ],
-    // Optional: List your experience, they must have `name` and `description`. `link` is optional.
+    projects: [
+      {
+        name: 'Each Way Matcher',
+        description:
+          'An automated horse racing betting program to make bets on profitable each-way and extra place races.',
+        link: 'https://github.com/tom-pollak/each-way-matcher',
+      },
+      {
+        name: 'Pirates!',
+        description:
+          'An interactive pirate game using Java and LibGDX as part of the ENG1 module.',
+        link: 'https://github.com/tom-pollak/pirates',
+      },
+      {
+        name: 'Poker Web Application',
+        description:
+          'A free live poker web application using Python and Django, deployed on Heroku.',
+        link: 'https://github.com/tom-pollak/web-poker',
+      },
+      {
+        name: 'FOR500 Windows Forensics - SANS Institute',
+        description:
+          'Completed the course over a period of two weeks. Sponsored to take part through the Cyber Discovery programme.',
+        link: 'sans.org/cyber-security-courses/windows-forensic-analysis',
+      },
+      {
+        name: 'Cyber Discovery',
+        description:
+          'Independently completed the Cyber Discovery programme run by HM government in partnership with SANS institute. I was selected as one of the top 500 students to attend the Cyber Discovery Elite event in London.',
+        link: 'https://joincyberdiscovery.com/',
+      },
+    ],
     experience: [
       {
-        name: 'Acme Corp',
-        description: 'Full-Stack Developer, February 2020 - Present',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Glasshouse Bar',
+        description: 'Bartender, September 2021 - Present',
+        link: '',
       },
       {
-        name: 'Globex Corp',
-        description: 'Full-Stack Developer, December 2017 - February 2020',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Seafood Bar & Grill',
+        description: 'Waiter, July - September 2021',
+        link: '',
       },
       {
-        name: 'Hooli',
-        description: 'Full-Stack Developer, May 2015 - December 2017',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Derbyshire Police - CID Interview Training',
+        description: 'Mock Police Witness Interviewee - March 2021',
+        link: '',
+      },
+      {
+        name: 'Fishpond',
+        description: 'Bartender, June - September 2020',
+        link: '',
       },
     ],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
-        name: 'Languages & Frameworks',
-        description:
-          'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
+        name: 'Languages',
+        description: 'Python, Java, Haskell, JavaScript, SQL, BASH',
       },
       {
-        name: 'Databases',
-        description: 'MongoDB, PostreSQL, MySQL',
+        name: 'Technologies',
+        description:
+          'Git, Django, Pandas, Numpy, LibGDX, Docker, Vue.js, PostgreSQL, Heroku, Selenium',
       },
       {
-        name: 'Other',
-        description:
-          'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+        name: 'Interests',
+        description: 'Climbing, Hockey, Poker, Chess, Running',
       },
     ],
   },
@@ -131,7 +152,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`, // This color appears on mobile
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/portrait.png`,
       },
     },
   ],
