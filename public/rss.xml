@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom Pollak]]></title><description><![CDATA[Studying Computer Science @ University of York
+    ]]></description><link>https://tom-pollak.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Feb 2022 16:39:40 GMT</lastBuildDate><item><title><![CDATA[Calculating Placing Probabilities on Win Odds]]></title><description><![CDATA[good runner has 5% chance of winning, then every other runner has (1 - 5%) / (num runners - 1) probability of winning good runners…]]></description><link>https://tom-pollak.github.io/blog/calc-place-probs/</link><guid isPermaLink="false">https://tom-pollak.github.io/blog/calc-place-probs/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;good runner has 5% chance of winning, then every other runner has (1 - 5%) / (num runners - 1) probability of winning&lt;/li&gt;
+&lt;li&gt;good runners probability of placing 2nd | not placing 1st&lt;/li&gt;
+&lt;li&gt;probability good runner winning: P(X=1)&lt;/li&gt;
+&lt;li&gt;probability of every other runner winning: (1 - P(X=Win)) / #runners - 1&lt;/li&gt;
+&lt;li&gt;Therefore: P(X=2 | X != 1) = P(X=1) / (1 - probability of another runner winning)&lt;/li&gt;
+&lt;li&gt;P(X=2) = P(X=2 | X != 1) * P(X != 1)&lt;/li&gt;
+&lt;li&gt;General case: P(X=k | X != (1..k-1)) = P(X=1) / (1 - k * probability of another runner winning)&lt;/li&gt;
+&lt;li&gt;P(X=k) = P(k | X != (1..k-1)) * P(X != (1..k-1))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$A = B$
+$$
+\theta
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;For a good runner A beating any runner other than B&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;hello&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Ideas]]></title><description><![CDATA[Ideas Kelly criterion for races with places Kelly criterion Odds of individual horse position Exp value v exp growth Risk and bankroll…]]></description><link>https://tom-pollak.github.io/blog/ideas/</link><guid isPermaLink="false">https://tom-pollak.github.io/blog/ideas/</guid><pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Ideas&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Kelly criterion for races with places&lt;/li&gt;
+&lt;li&gt;Kelly criterion&lt;/li&gt;
+&lt;li&gt;Odds of individual horse position&lt;/li&gt;
+&lt;li&gt;Exp value v exp growth&lt;/li&gt;
+&lt;li&gt;Risk and bankroll management&lt;/li&gt;
+&lt;li&gt;The unreasonable effiecency of exchange markets&lt;/li&gt;
+&lt;li&gt;What is match betting&lt;/li&gt;
+&lt;li&gt;Algorithmic match betting cycle&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analysis of various strategies&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each way punts&lt;/li&gt;
+&lt;li&gt;Extra places&lt;/li&gt;
+&lt;li&gt;Dutching&lt;/li&gt;
+&lt;li&gt;Fibonacci betting on a draw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>
