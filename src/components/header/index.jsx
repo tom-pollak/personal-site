@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import React from 'react';
 
 import profileImg from '../../images/portrait.png';
-import {withPrefix} from "gatsby-link";
+import { withPrefix } from 'gatsby-link';
 
 const classes = {
   wrapper: 'block mb-6 md:flex',
@@ -70,7 +70,12 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           )}
           {cv && (
             <li className={classes.item}>
-              <a rel="noopener noreferrer" className={classes.link} href={withPrefix('/cv.pdf')} target="_blank">
+              <a
+                rel="noopener noreferrer"
+                className={classes.link}
+                href={withPrefix('/cv.pdf')}
+                target="_blank"
+              >
                 CV
               </a>
             </li>

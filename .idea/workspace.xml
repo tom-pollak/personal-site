@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dfd0a84-476b-4076-8a6d-151c23618af4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blog/ideas/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/section-education/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Portrait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/cv.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-first-blog/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-first-blog/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-fourth-blog/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-fourth-blog/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-second-blog/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-second-blog/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-third-blog/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blog/my-third-blog/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/calc-place-probs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blog/calc-place-probs/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +69,7 @@
       <updated>1644442108292</updated>
       <workItem from="1644442134533" duration="192000" />
       <workItem from="1644442376026" duration="13036000" />
+      <workItem from="1644507775718" duration="25000" />
     </task>
     <servers />
   </component>

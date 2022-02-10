@@ -1,7 +1,7 @@
 ---
 title: Calculating Placing Probabilities on Win Odds
 date: '2022-02-10T00:00:00.000Z'
-description: 'asjdfkjflk'
+description: 'hello'
 ---
 
 - good runner has 5% chance of winning, then every other runner has (1 - 5%) / (num runners - 1) probability of winning
@@ -13,6 +13,10 @@ description: 'asjdfkjflk'
 - General case: P(X=k | X != (1..k-1)) = P(X=1) / (1 - k \* probability of another runner winning)
 - P(X=k) = P(k | X != (1..k-1)) \* P(X != (1..k-1))
 
+$A = B$
+$$
+\theta
+$$
 ---
 
 For a good runner A beating any runner other than B

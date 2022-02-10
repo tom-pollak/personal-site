@@ -6,6 +6,8 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+import "katex/dist/katex.min.css"
+
 const classes = {
   wrapper: 'mt-16 blog-content',
   title: 'mt-16 text-4xl text-gray-900 font-bold',
