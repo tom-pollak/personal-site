@@ -46,7 +46,7 @@ module.exports = {
         name: 'FOR500 Windows Forensics - SANS Institute',
         description:
           'Completed the course over a period of two weeks. Sponsored to take part through the Cyber Discovery programme.',
-        link: 'sans.org/cyber-security-courses/windows-forensic-analysis',
+        link: 'https://sans.org/cyber-security-courses/windows-forensic-analysis',
       },
       {
         name: 'Cyber Discovery',
