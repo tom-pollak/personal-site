@@ -1,31 +1,50 @@
 ---
 title: Calculating Placing Probabilities on Win Odds
 date: '2022-02-10T00:00:00.000Z'
-description: 'Using '
+description: 'Determining the probability of a horse placing 4th using win odds'
 ---
 
-Using a horse's win probability to determine the probability of a horse placing in each position
+Using a group of horse's win probabilites to determine the probability of a horse placing in a single position. This can be useful for comparing the odds for the race in different markets, where there could be potiential for +EV bets in undervalued markets. Although the algorithms are built, I have yet to backtest it in any real markets so far.
 
-An example
-1. Let us imagine a horse who has odds 2.5 to win a race. Therefore the horse has an implied probability of 40% to win ($\frac{1}{2.5}$)
-2. If this horse has a 40% chance of winning, then all other horses combined have an $\frac{1 - 0.4}{\text{no of horses - 1}}$
-- good runner has 5% chance of winning, then every other runner has (1 - 5%) / (num runners - 1) probability of winning
-- good runners probability of placing 2nd | not placing 1st
-- probability good runner winning: P(X=1)
-- probability of every other runner winning: (1 - P(X=Win)) / #runners - 1
-- Therefore: P(X=2 | X != 1) = P(X=1) / (1 - probability of another runner winning)
-- P(X=2) = P(X=2 | X != 1) \* P(X != 1)
-- General case: P(X=k | X != (1..k-1)) = P(X=1) / (1 - k \* probability of another runner winning)
-- P(X=k) = P(k | X != (1..k-1)) \* P(X != (1..k-1))
+For any such horse in a race, the probabillity they will place in position $k$ is as follows:
 
-$A = B$
 $$
-    \theta
+	P(X=k) = P(X = k\ |\ X \neq (1..k-1)) \times P(X \neq (1..k-1))
 $$
----
 
-For a good runner A beating any runner other than B
+The algorithm to solve this recursively tries every combination of horse positions, the variable `neg_prob` to track the total probability left for all the horses in solution, and `cur_adj_factor`  keeps track of the probability of the solution actually happening.
+
+To calculate the final horse probability for a given position, you must sum together every solution in which the horse finishes in that position.
+
+The algorithm has a time complexity of $O(h \times n!)$ Where $n$ is the number of places you want to calculate up to.
 
 ```python
-print('hello')
+def calc_places_prob(
+	horses,
+	cur_neg_prob=1,
+	cur_adj_factor=1,
+	included_r=None,
+	recursion_level=0,
+):
+	if included_r is None:
+		included_r = []
+	recursion_level += 1
+	for horse, probabilities in horses.items():
+		prob = probabilities[0] # The horse's original probability
+		if horse in included_r: # A horse can only be in a solution once
+			continue
+
+		if recursion_level > 1:
+			horses[horse][recursion_level - 1] += prob * cur_adj_factor
+
+		if recursion_level < RELEVANT_PLACES:
+			neg_prob = cur_neg_prob - prob
+			adj_factor = cur_adj_factor * prob / neg_prob
+			included_r.append(horse)
+			horses = calc_places_prob(horses, neg_prob, adj_factor, included_r, recursion_level)
+			included_r.remove(horse)
+	return horses
 ```
+
+
+Check out the whole project: [tom-pollak/each-way-matcher](https://github.com/tom-pollak/each-way-matcher)

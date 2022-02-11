@@ -1,10 +1,8 @@
 ---
-title: Ideas
-date: '2022-02-10T00:00:00.000Z'
-description: 'asjdfkjflk'
+title: Blog Ideas
+date: '2021-06-12T00:00:00.000Z'
+description: ''
 ---
-
-# Ideas
 
 - Kelly criterion for races with places
 - Kelly criterion

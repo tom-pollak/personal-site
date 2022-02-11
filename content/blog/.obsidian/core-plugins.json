@@ -4,12 +4,14 @@
   "switcher",
   "graph",
   "backlink",
+  "outgoing-link",
   "page-preview",
   "note-composer",
   "command-palette",
-  "editor-status",
+  "starred",
   "markdown-importer",
-  "word-count",
+  "outline",
   "open-with-default-app",
+  "workspaces",
   "file-recovery"
 ]

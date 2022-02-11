@@ -1,16 +1,16 @@
 {
   "main": {
-    "id": "c0989761f93f823d",
+    "id": "96edc31b0266e59a",
     "type": "split",
     "children": [
       {
-        "id": "43f948e0b898e702",
+        "id": "aa838e20b3abb230",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "calc-place-probs/index.md",
-            "mode": "source"
+            "file": "Year 2/Term 2/INT2/Supervised Learning.md",
+            "mode": "preview"
           }
         }
       }
@@ -18,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "01c6538ee72dee51",
+    "id": "1a226c8a131a200c",
     "type": "split",
     "children": [
       {
-        "id": "f443069b076d3b55",
+        "id": "58cc794e02b9fd38",
         "type": "tabs",
         "children": [
           {
-            "id": "ee40c86bcd11d59a",
+            "id": "4e3540c8edece2d3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,7 +34,7 @@
             }
           },
           {
-            "id": "3c1fafe6e89f5838",
+            "id": "5cb3673bdb36a353",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -47,36 +47,74 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "f1bee60ae71b58da",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 158
   },
   "right": {
-    "id": "039398c2bfcae47c",
+    "id": "956d08eff0b9ff22",
     "type": "split",
     "children": [
       {
-        "id": "90906dcc4ce010d3",
+        "id": "b50689bd856f3de1",
         "type": "tabs",
         "children": [
           {
-            "id": "1da62d534ec1dfca",
+            "id": "855f261f29ffd2c1",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "calc-place-probs/index.md",
-                "collapseAll": false,
+                "file": "Year 2/Term 2/INT2/Supervised Learning.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
+            }
+          },
+          {
+            "id": "9a54894ca7cfdb14",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Year 2/Term 2/INT2/Supervised Learning.md"
+              }
+            }
+          },
+          {
+            "id": "a93d08443ab1ec2b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Year 2/Term 2/INT2/Supervised Learning.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "06301941733f894f",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ]
@@ -86,8 +124,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "43f948e0b898e702",
+  "active": "aa838e20b3abb230",
   "lastOpenFiles": [
-    "calc-place-probs/index.md"
+    "Year 2/Term 2/INT2/Supervised Learning.md",
+    "Year 2/Term 2/SYS3/Hazards.md",
+    "Year 2/Term 2/SOF3/Type System.md",
+    "Year 2/Term 2/SOF3/Recursion.md",
+    "Year 2/Term 2/INT2/Perceptron.md",
+    "TODO.md",
+    "Year 2/Term 2/SYS3/Principles of Computer Design.md",
+    "Year 2/Term 1/INT1/Exam/INT1 Exam.md",
+    "Year 2/Term 1/DAT2/Exam/DAT2 Exam.md",
+    "Year 2/Term 2/ENG1/OOP Patterns.md"
   ]
 }
