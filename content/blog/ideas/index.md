@@ -9,7 +9,7 @@ description: ''
 - Odds of individual horse position
 - Exp value v exp growth
 - Risk and bankroll management
-- The unreasonable effiecency of exchange markets
+- The unreasonable efficiency of exchange markets
 - What is match betting
 - Algorithmic match betting cycle
 - Analysis of various strategies

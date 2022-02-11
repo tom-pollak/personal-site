@@ -4,9 +4,9 @@ date: '2022-02-10T00:00:00.000Z'
 description: 'Determining the probability of a horse placing 4th using win odds'
 ---
 
-Using a group of horse's win probabilites to determine the probability of a horse placing in a single position. This can be useful for comparing the odds for the race in different markets, where there could be potiential for +EV bets in undervalued markets. Although the algorithms are built, I have yet to backtest it in any real markets so far.
+Using a group of horse's win probabilities to determine the probability of a horse placing in a single position. This can be useful for comparing the odds for the race in different markets, where there could be potential for +EV bets in undervalued markets. Although the strategy is complete, I have yet to backtest it in any real markets so far.
 
-For any such horse in a race, the probabillity they will place in position $k$ is as follows:
+For any such horse in a race, the probability they will place in position $k$ is as follows:
 
 $$
 	P(X=k) = P(X = k\ |\ X \neq (1..k-1)) \times P(X \neq (1..k-1))

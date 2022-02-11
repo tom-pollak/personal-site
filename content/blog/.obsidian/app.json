@@ -79,7 +79,10 @@
     "Speedup",
     "mispredictions",
     "speedup",
-    "CPIs"
+    "CPIs",
+    "backtest",
+    "tom-pollak",
+    "Dutching"
   ],
   "foldHeading": false,
   "foldIndent": false,
