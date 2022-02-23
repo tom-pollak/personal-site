@@ -16,7 +16,7 @@ The algorithm to solve this recursively tries every combination of horse positio
 
 To calculate the final horse probability for a given position, you must sum together every solution in which the horse finishes in that position.
 
-The algorithm has a time complexity of $P(h,n) = O\left(\frac{h!}{(h - n)!}\right)$ Where $n$ is the number of places you want to calculate up to.
+The algorithm has a time complexity of $P(h,n) = O\left(\frac{h!}{(h - n)!}\right)$ Where $h$ is the number of horses and $n$ is the number of places you want to calculate up to where $n \leq h$.
 
 ```python
 def calc_places_prob(
