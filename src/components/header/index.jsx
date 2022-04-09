@@ -6,7 +6,7 @@ import profileImg from '../../images/portrait.png';
 import { withPrefix } from 'gatsby-link';
 
 const classes = {
-  wrapper: 'block mb-6 md:flex',
+  wrapper: 'block md:flex',
   imageWrapper: 'w-full max-w-150',
   image: 'rounded-full transform transition-all duration-150 hover:scale-105',
   contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
