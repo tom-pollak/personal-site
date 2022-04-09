@@ -9,8 +9,8 @@ module.exports = {
     github: `https://github.com/tom-pollak`,
     linkedin: ``,
     cv: `src/assets/cv.pdf`,
-    about: `A second year Computer Science student seeking a summer internship in software development or other related fields. I enjoy learning practically on projects and also enjoy researching topics independently. I am most proficient with Python but also have experience in JavaScript and Java. I also have many years of experience with Linux systems and Git version control.`,
-    education: [
+    about: `Hi! I'm Tom, and I've either directed you here, or you're recruiting a developer. Either way, welcome! Check out my GitHub, and feel free to reach out.`,
+    education: [ 
       {
         school: `University of York`,
         degree: `BSc (Hons) Computer Science, 2023`,
