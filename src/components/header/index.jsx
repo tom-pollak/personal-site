@@ -68,18 +68,9 @@ const Header = ({ metadata = {}, noBlog = false }) => {
               </Link>
             </li>
           )}
-          {cv && (
-            <li className={classes.item}>
-              <a
-                rel="noopener noreferrer"
-                className={classes.link}
-                href={withPrefix('/cv.pdf')}
-                target="_blank"
-              >
-                CV
-              </a>
-            </li>
-          )}
+          <li>
+            <a href="https://tom-pollak.github.io/cv/cv.pdf" target="_blank">CV</a>
+          </li>
         </ul>
       </div>
     </div>
