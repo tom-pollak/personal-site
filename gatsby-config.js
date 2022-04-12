@@ -8,7 +8,7 @@ module.exports = {
     author: ``,
     github: `https://github.com/tom-pollak`,
     linkedin: ``,
-    cv: `src/assets/cv.pdf`,
+    cv: `https://tom-pollak.github.io/cv/cv.pdf`,
     about: `Hi! I'm Tom, and I'm a CS student who loves to code. I've either directed you here, or you're recruiting a developer. Either way, welcome! Check out my GitHub, and feel free to reach out.`,
     education: [ 
       {
