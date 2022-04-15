@@ -15,7 +15,7 @@ const classes = {
   list: 'mt-6 uppercase tracking-wider',
   item: 'inline list-none pr-4',
   link:
-    'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black',
+    'inline-block py-2 font-semibold text-xs text-blue-500 hover:text-pink-500',
 };
 
 const Header = ({ metadata = {}, noBlog = false }) => {
@@ -65,13 +65,13 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           {!noBlog && (
             <li className={classes.item}>
               <Link className={classes.link} to="/blog">
-                Blog
+                My Writings
               </Link>
             </li>
           )}
           <li className={classes.item}>
             <a className={classes.link} href={cv} target="_blank">
-              CV
+              Hire Me!
             </a>
           </li>
         </ul>
