@@ -12,10 +12,10 @@ const classes = {
   contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
   name: 'text-5xl text-gray-900 font-bold leading-tight hover:text-black',
   description: 'text-gray-600',
-  list: 'mt-6 uppercase tracking-wider',
+  list: 'mt-6 tracking-wider',
   item: 'inline list-none pr-4',
   link:
-    'inline-block py-2 font-semibold text-xs text-blue-500 hover:text-pink-500',
+    'inline-block py-2 font-semibold text-sm text-blue-500 hover:text-pink-500',
 };
 
 const Header = ({ metadata = {}, noBlog = false }) => {
@@ -51,7 +51,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           {github && (
             <li className={classes.item}>
               <a className={classes.link} href={github}>
-                GitHub
+                github
               </a>
             </li>
           )}
@@ -65,13 +65,13 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           {!noBlog && (
             <li className={classes.item}>
               <Link className={classes.link} to="/blog">
-                My Writings
+                my writings
               </Link>
             </li>
           )}
           <li className={classes.item}>
             <a className={classes.link} href={cv} target="_blank">
-              Hire Me!
+              hire me!
             </a>
           </li>
         </ul>
