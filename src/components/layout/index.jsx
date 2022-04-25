@@ -10,10 +10,11 @@ const classes = {
 const Layout = ({ children }) => {
   return (
     <div className={classes.outerWrapper}>
-      <Icon className="{svg}"></Icon>
-      <div className={classes.wrapper}>{children}</div>
+      {/* <Icon className="{svg}"></Icon> */}
+      <div id='top' className={classes.wrapper}>{children}</div>
     </div>
   );
 };
+
 
 export default Layout;

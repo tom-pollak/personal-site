@@ -3,7 +3,6 @@ import get from 'lodash/get';
 import React from 'react';
 
 import profileImg from '../../images/portrait.png';
-import { withPrefix } from 'gatsby-link';
 
 const classes = {
   wrapper: 'block md:flex',
@@ -12,7 +11,7 @@ const classes = {
   contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
   name: 'text-5xl text-gray-900 font-bold leading-tight hover:text-black',
   description: 'text-gray-600',
-  list: 'mt-6 tracking-wider',
+  list: 'mt-3 tracking-wider',
   item: 'inline list-none pr-4',
   link:
     'inline-block py-2 font-semibold text-sm text-blue-500 hover:text-pink-500',
