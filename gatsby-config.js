@@ -56,38 +56,17 @@ module.exports = {
         link: 'https://joincyberdiscovery.com/',
       },
     ],
-    experience: [
-      {
-        name: 'Glasshouse Bar',
-        description: 'Bartender, September 2021 - Present',
-        link: '',
-      },
-      {
-        name: 'Seafood Bar & Grill',
-        description: 'Waiter, July - September 2021',
-        link: '',
-      },
-      {
-        name: 'Derbyshire Police - CID Interview Training',
-        description: 'Mock Police Witness Interviewee - March 2021',
-        link: '',
-      },
-      {
-        name: 'Fishpond',
-        description: 'Bartender, June - September 2020',
-        link: '',
-      },
-    ],
+    // experience: [],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
         name: 'Languages',
-        description: 'Python, Java, Haskell, JavaScript, SQL, BASH',
+        description: 'Python, Java, Haskell, JavaScript, HTML, BASH',
       },
       {
         name: 'Technologies',
         description:
-          'Git, Django, Pandas, Numpy, LibGDX, Docker, Vue.js, PostgreSQL, Heroku, Selenium',
+          'Linux, Git, LaTex, Django, Pandas, Numpy, Docker, LibGDX, Vue.js, PostgreSQL, Heroku, Selenium',
       },
       {
         name: 'Interests',
@@ -156,7 +135,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `ADD YOUR TRACKING ID HERE`, // Optional Google Analytics
+        trackingId: `UA-167152705-1`,
       },
     },
     {

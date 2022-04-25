@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from "../../assets/svg/v.svg";
 
 const classes = {
   wrapper: 'p-8 relative max-w-screen-xl xs:p-24',
@@ -9,9 +10,11 @@ const classes = {
 const Layout = ({ children }) => {
   return (
     <div className={classes.outerWrapper}>
-      <div className={classes.wrapper}>{children}</div>
+      {/* <Icon className="{svg}"></Icon> */}
+      <div id='top' className={classes.wrapper}>{children}</div>
     </div>
   );
 };
+
 
 export default Layout;
