@@ -2,11 +2,11 @@ import { graphql } from 'gatsby';
 import moment from 'moment';
 import React from 'react';
 
-import Header from '../components/header';
+import HeaderNoPhoto from '../components/header-no-photo';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import "katex/dist/katex.min.css"
+import 'katex/dist/katex.min.css';
 
 const classes = {
   wrapper: 'mt-16 blog-content',
@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <Header metadata={data.site.siteMetadata} />
+      <HeaderNoPhoto metadata={data.site.siteMetadata} />
       <SEO title={post.frontmatter.title} />
       <h1 className={classes.title}>{post.frontmatter.title}</h1>
       <p className={classes.date}>
