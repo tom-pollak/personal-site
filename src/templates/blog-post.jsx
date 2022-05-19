@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import moment from 'moment';
 import React from 'react';
 
-import Header from '../components/header-no-title';
+import Header from '../components/header';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <Header metadata={data.site.siteMetadata} />
+      <Header metadata={data.site.siteMetadata} noPhoto={true} noTitle={true}/>
       <SEO title={post.frontmatter.title} />
       <h1 className={classes.title}>{post.frontmatter.title}</h1>
       <p className={classes.date}>

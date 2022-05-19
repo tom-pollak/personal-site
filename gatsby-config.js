@@ -3,8 +3,7 @@ module.exports = {
     siteUrl: `https://tom-pollak.github.io/`,
     name: 'Tom Pollak',
     title: `Tom Pollak`,
-    description: `Studying Computer Science @ University of York
-    `,
+    description: `Studying Computer Science @ University of York`,
     author: ``,
     github: `https://github.com/tom-pollak`,
     linkedin: ``,
