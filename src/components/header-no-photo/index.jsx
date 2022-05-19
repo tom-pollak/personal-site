@@ -7,7 +7,7 @@ const classes = {
   wrapper: 'block md:flex',
   imageWrapper: 'w-full max-w-150',
   image: 'rounded-full transform transition-all duration-150 hover:scale-105',
-  contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
+  contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-0',
   name: 'text-5xl text-gray-900 font-bold leading-tight hover:text-black',
   description: 'text-gray-600',
   list: 'mt-3 tracking-wider',
@@ -16,7 +16,7 @@ const classes = {
     'inline-block py-2 font-semibold text-sm text-blue-500 hover:text-pink-500',
 };
 
-const HeaderNoPhoto = ({ metadata = {}, noBlog = false }) => {
+const Header = ({ metadata = {}, noBlog = false }) => {
   const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
@@ -63,7 +63,7 @@ const HeaderNoPhoto = ({ metadata = {}, noBlog = false }) => {
             </li>
           )}
           <li className={classes.item}>
-            <a className={classes.link} href={cv} target="_blank">
+            <a className={classes.link} href={cv} target="_blank" rel="noreferrer">
               hire me!
             </a>
           </li>
@@ -73,4 +73,4 @@ const HeaderNoPhoto = ({ metadata = {}, noBlog = false }) => {
   );
 };
 
-export default HeaderNoPhoto;
+export default Header;
