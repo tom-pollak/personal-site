@@ -10,8 +10,8 @@ import 'katex/dist/katex.min.css';
 
 const classes = {
   wrapper: 'mt-8 blog-content',
-  title: 'mt-8 text-3xl text-gray-900 font-bold',
-  date: 'text-gray-600 font-light',
+  title: 'mt-8 mb-1 text-3xl text-gray-900 font-bold',
+  date: 'mt-1 text-gray-600 font-light',
 };
 
 const BlogPost = ({ data }) => {
@@ -19,9 +19,11 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <Header metadata={data.site.siteMetadata} noPhoto={true} noTitle={true}/>
+      {/* <Header metadata={data.site.siteMetadata} noPhoto={true} noTitle={true}/> */}
+      <Header metadata={data.site.siteMetadata} noPhoto={true} noDescription={true} />
       <SEO title={post.frontmatter.title} />
       <h1 className={classes.title}>{post.frontmatter.title}</h1>
+      <hr />
       <p className={classes.date}>
         Posted on {moment(post.frontmatter.date).format('MMMM D, YYYY')}
       </p>

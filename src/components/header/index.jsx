@@ -13,12 +13,13 @@ const classes = {
   name: 'text-4xl text-gray-900 font-bold leading-tight hover:text-black',
   description: 'text-gray-600',
   list: 'mt-3 tracking-wider',
+  listNoDescription: 'mt-1 tracking-wider',
   item: 'inline list-none pr-4',
   link:
-    'inline-block py-2 font-semibold text-sm text-blue-500 hover:text-pink-500',
+    'inline-block py-0 font-semibold text-sm text-blue-500 hover:text-pink-500',
 };
 
-const Header = ({ metadata = {}, noBlog = false, noPhoto = false, noTitle = false}) => {
+const Header = ({ metadata = {}, noBlog = false, noPhoto = false, noDescription = false, noTitle = false}) => {
   const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
@@ -40,10 +41,11 @@ const Header = ({ metadata = {}, noBlog = false, noPhoto = false, noTitle = fals
           <h1 className={classes.name}>
             <Link to="/">{metadata.name}</Link>
           </h1>
-          <p className={classes.description}>{metadata.description}</p>
+          {!noDescription && 
+          <p className={classes.description}>{metadata.description}</p>}
         </div>
       }
-        <ul className={classes.list}>
+        <ul className={!noDescription ? classes.list : classes.listNoDescription}>
           {noTitle && 
             <li className={classes.item}>
             <Link to="/" className={classes.link}>home</Link>
