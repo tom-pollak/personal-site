@@ -1,0 +1,5 @@
+---
+title: 3. Extending with Arbitrage
+date: '2022-05-19T00:00:00.000Z'
+description: ''
+---
