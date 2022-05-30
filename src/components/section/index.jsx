@@ -2,7 +2,7 @@ import React from 'react';
 
 const classes = {
   wrapper: 'block pt-3 md:flex',
-  title: 'pb-6 md:w-full md:max-w-150 md:p-1',
+  title: 'pb-6 md:w-full md:max-w-prose md:p-1',
   heading:
     'font-xs font-light tracking-widest text-sm text-gray-600 leading-normal uppercase',
   content: 'flex-none text-lg text-gray-600 font-light md:flex-1 md:pl-20',
