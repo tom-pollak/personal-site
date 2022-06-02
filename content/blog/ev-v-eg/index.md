@@ -59,8 +59,11 @@ lose the wager almost every time.
 We can formalize this:
 
 $$
- E[G] =  - 1 + \prod\limits_i (1 + x_i)^{P(x_i)}
+ EG[X] =  - 1 + \prod\limits_i (1 + x_i)^{P(x_i)}
 $$
+
+- $x_i$ is the money won/lost relative to your entire bankroll, as opposed to expected
+  value, which is relative to your stake.
 
 This is expected growth, and it uses the expected outcomes of an event rather than the
 value. For any given case, expected growth will be less than the expected value. This
