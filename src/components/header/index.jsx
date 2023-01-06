@@ -51,16 +51,6 @@ const Header = ({ metadata = {}, noBlog = false, noPhoto = false, noDescription 
             <Link to="/" className={classes.link}>home</Link>
             </li>
           }
-          {twitter && (
-            <li className={classes.item}>
-              <a
-                className={classes.link}
-                href={`https://twitter.com/${twitter}`}
-              >
-                Twitter
-              </a>
-            </li>
-          )}
           {github && (
             <li className={classes.item}>
               <a className={classes.link} href={github}>

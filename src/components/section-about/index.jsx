@@ -3,21 +3,21 @@ import React from 'react';
 import Section from '../section';
 import get from 'lodash/get';
 
-const SectionAbout = ({ about }) => {
-  let split = about.split('GitHub');
-  const github = "https://github.com/tom-pollak"
+const classes = {
+  wrapper: 'block pt-3',
+  title:
+    'pb-6 pt-4 text-xl font-xs text-center font-light text-gray-600 italic',
+  content: 'flex-none text-lg text-gray-600 font-light md:flex-1 md:pl-20',
+};
+
+const SectionAbout = ({ about, emoji }) => {
   return (
-    <Section>
-      <div className="mb-8">
-        <p><span className='font-extrabold inline text-3xl pr-3 text-gray-800'>Hi!</span>
-        {split[0]}
-        <a className="text-blue-500 hover:text-pink-500" href={github}>
-          GitHub
-        </a>
-        {split[1]}
-        </p>
-      </div>
-    </Section>
+    <div className={classes.wrapper}>
+      <p className={classes.title}>
+        {about}
+        <span className="not-italic">{emoji}</span>
+      </p>
+    </div>
   );
 };
 

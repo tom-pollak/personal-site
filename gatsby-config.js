@@ -7,9 +7,10 @@ module.exports = {
     author: ``,
     github: `https://github.com/tom-pollak`,
     linkedin: ``,
-    cv: `https://tom-pollak.github.io/cv/pretty/2022-resume-tom.pdf`,
+    cv: `https://tom-pollak.github.io/cv/simple/2022-resume-tom.pdf`,
     
-    about: `I'm Tom, and I'm a CS student who loves to code. I've either directed you here, or you're recruiting a developer. Either way, welcome! Check out my GitHub, and feel free to reach out.`,
+    about: `I like coding and cool problems `, // Space is needed between emoji
+    emoji: `🧩`,
     education: [ 
       {
         school: `University of York`,
@@ -137,17 +138,18 @@ module.exports = {
         trackingId: `UA-167152705-1`,
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `devfolio`,
-        short_name: `devfolio`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`, // This color appears on mobile
-        display: `minimal-ui`,
-        icon: `src/images/portrait.png`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `devfolio`,
+    //     short_name: `devfolio`,
+    //     start_url: `/`,
+    //     background_color: `#663399`,
+    //     theme_color: `#663399`, // This color appears on mobile
+    //     display: `minimal-ui`,
+    //     // icon: `src/images/portrait.png`,
+    //     icon: ``,
+    //   },
+    // },
   ],
 };
