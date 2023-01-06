@@ -5,7 +5,7 @@ import React from 'react';
 import profileImg from '../../images/portrait.png';
 
 const classes = {
-  wrapper: 'block md:flex',
+  wrapper: 'block md:flex place-items-center',
   imageWrapper: 'w-full max-w-150',
   image: 'rounded-full transform transition-all duration-150 hover:scale-105',
   contentWrapper: 'flex-none pt-6 md:pt-1 md:flex-1 md:pl-20',
@@ -20,10 +20,8 @@ const classes = {
 };
 
 const Header = ({ metadata = {}, noBlog = false, noPhoto = false, noDescription = false, noTitle = false}) => {
-  const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
-  // const cv = get(metadata, 'cv', false);
   const cv = get(metadata, 'cv', false);
 
   return (
