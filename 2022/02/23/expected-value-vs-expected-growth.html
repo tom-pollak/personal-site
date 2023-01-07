@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom Pollak</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    
+    <!-- centers header and posts  -->
+    <div class="sm:mt-16 mt-8 sm:mx-16 mx-8 mb-8 max-w-3xl">
+      <div class="grid justify-items-center">
+  <div class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left">
+     <div>
+  <h1 class="text-4xl text-gray-900 font-bold leading-tight">
+    <a href="/">Tom Pollak</a>
+  </h1>
+  <p class="text-gray-600 ">Studying Computer Science @ University of York</p>
+  <ul class="mt-2 tracking-wider">
+  
+    
+      <li class="inline-block w-fit pr-4">
+        <a class="font-semibold text-sm text-blue-500 hover:text-pink-500" 
+          
+            href="/"
+          
+        >
+          home
+
+          </a>
+      </li>
+    
+  
+    
+      <li class="inline-block w-fit pr-4">
+        <a class="font-semibold text-sm text-blue-500 hover:text-pink-500" 
+          
+            href="https:///github.com/tom-pollak" target="_blank" rel="noreferrer" 
+          
+        >
+          github
+
+          </a>
+      </li>
+    
+  
+    
+      <li class="inline-block w-fit pr-4">
+        <a class="font-semibold text-sm text-blue-500 hover:text-pink-500" 
+          
+            href="/posts.html"
+          
+        >
+          my writings
+
+          </a>
+      </li>
+    
+  
+    
+      <li class="inline-block w-fit pr-4">
+        <a class="font-semibold text-sm text-blue-500 hover:text-pink-500" 
+          
+            href="https://tom-pollak.github.io/cv/simple/2022-resume-tom.pdf" target="_blank" rel="noreferrer" 
+          
+        >
+          hire me!
+
+          </a>
+      </li>
+    
+  
+  </ul>
+</div>
+
+  </div>
+  <!-- bit of a hack, I want the description to be centered wit the nav bar -->
+  
+</div>
+ <div class="">
+  <hr />
+  <div class="pt-4 grid justify-items-center">
+    <h1 class="text-2xl text-gray-800 pb-0.5">Expected Value vs Expected Growth</h1>
+    <p class="text-gray-500 text-sm pb-1">
+      23rd Feb 2022
+    </p>
+    <p class="text-gray-600 pb-4 text-[17px] italic"></p>
+    <p class="justify-self-start"><blockquote>
+  <p>If you wager your entire bankroll every time you place a bet, your bankroll will eventually be 0.</p>
+</blockquote>
+
+<h2 id="expected-value">Expected Value</h2>
+
+<blockquote>
+  <p>Expected value is the average amount we receive if we repeat a bet an infinite number of times.</p>
+</blockquote>
+
+\[E[X] = \sum\limits_i x_i P(x_i)\]
+
+<p>Where:</p>
+
+<ul>
+  <li>$x_i$ - the percentage of stake won or lost from outcome $i$</li>
+  <li>$P(x_i)$ - the probability of that outcome.</li>
+</ul>
+
+<p>For a typical sports bet, $x_i$ can be found with the equation:</p>
+
+\[x_i = \frac{S(O_i - 1)}{B_0}\]
+
+<p>Where:</p>
+
+<ul>
+  <li>$S$ - stake</li>
+  <li>$O_i$ - decimal odds of outcome $i$</li>
+  <li>$B_0$ - initial bankroll before bet</li>
+</ul>
+
+<p>This calculates the relative increase in our bankroll from each possible outcome. For a
+losing scenario, $x_i = -\frac{S}{B_0}$ as we just lose our stake.</p>
+
+<h3 id="using-ev">Using EV</h3>
+
+<p>This can be used as a performance metric for a bet – if one bet has an expected value of
+5% and another 10% we would tend to prefer the latter to the former. However, this
+ignores relative likelihoods on the different outcomes.</p>
+
+<blockquote>
+  <p>E.g. If a bet has a 0.0000001% likelihood but pays out 11,000,000% the expected value
+is 10%, but this is not an attractive bet for most people. You certainly wouldn’t
+expect a 10% return on your investment.</p>
+</blockquote>
+
+<p>So we need a system dependent on the player’s current bankroll.</p>
+
+<h2 id="enter-expected-growth">Enter Expected Growth</h2>
+
+<p>The fundamental issue is that, while expected value calculates the long-term value of
+infinitely repeating a bet, in any real scenario we can only bet once, and only get one
+outcome.</p>
+
+<p>This is the problem with the previous example, as despite being positive EV, you could
+only bet fractions of a penny if you have any hope to be paid out before your bankroll
+hits 0. So while you have an expected value of 10%, the <em>expected outcome</em> is that you
+lose the wager almost every time.</p>
+
+<p>We can formalize this:</p>
+
+\[EG[X] =  - 1 + \prod\limits_i (1 + x_i)^{P(x_i)}\]
+
+<ul>
+  <li>$x_i$ is the money won/lost relative to your entire bankroll, as opposed to expected
+value, which is relative to your stake.</li>
+</ul>
+
+<p>This is expected growth, and it uses the expected outcomes of an event rather than the
+value. For any given case, expected growth will be less than the expected value. This
+lends itself to the idea of a finite bankroll, so that no matter how positive EV a bet
+is, betting too much can cause your bankroll to shrink.</p>
+
+<blockquote>
+  <p>If you wager your entire bankroll every time you place a bet, your bankroll will eventually be 0.</p>
+</blockquote>
+
+<p>Let us take this as an example for $EG$, any outcome that causes you to lose your entire
+bankroll ($x_i = -1$) will imply $EG = -1$, no matter the probability of that event
+occurring. This is because if something is possible, it will happen eventually and stop
+the entire system.</p>
+
+<p>Applying the concept to a sports bet, we can calculate the expected bankroll after a
+single bet:</p>
+
+\[B^* = B_0 \times \prod\limits_i \left(1 + \frac{S(O_i -1)}{B_0} \right)^{P(x_i)}\]
+
+<p>Take me to <strong><a href="../3-way-kelly/">Part 2!</a></strong></p>
+</p>
+  </div>
+</div>
+
+    </div>
+</html>
