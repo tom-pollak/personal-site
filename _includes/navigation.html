@@ -1,0 +1,24 @@
+<div>
+  <h1 class="text-4xl text-gray-900 font-bold leading-tight">
+    <a href="/">Tom Pollak</a>
+  </h1>
+  <p class="text-gray-600 ">Studying Computer Science @ University of York</p>
+  <ul class="mt-2 tracking-wider">
+  {% for item in site.data.navigation %}
+    {% if page.url != item.slug %}
+      <li class="inline-block w-fit pr-4">
+        <a class="font-semibold text-sm text-blue-500 hover:text-pink-500" 
+          {% if item.link contains "://" %}
+            href="{{ item.link }}" target="_blank" rel="noreferrer" 
+          {% else %}
+            href="{{ item.slug }}"
+          {% endif %}
+        >
+          {{ item.name }}
+
+          </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>

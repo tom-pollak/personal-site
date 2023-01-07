@@ -1,0 +1,12 @@
+- name: home
+  slug: /
+  link: false
+- name: github
+  slug: false
+  link: https:///github.com/tom-pollak
+- name: my writings
+  slug: /posts.html
+  link: false
+- name: hire me!
+  slug: false
+  link: https://tom-pollak.github.io/cv/simple/2022-resume-tom.pdf

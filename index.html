@@ -1,0 +1,10 @@
+---
+title: "Home"
+layout: default
+---
+
+{% include timeline.html %}
+
+<h2 class="text-lg pb-1">Recent Posts</h2>
+{% assign post_limit = 3 %}
+{% include post_list.html %}

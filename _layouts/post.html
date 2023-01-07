@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="">
+  <hr />
+  <div class="pt-4 grid justify-items-center">
+    <h1 class="text-2xl text-gray-800 pb-0.5">{{ page.title }}</h1>
+    <p class="text-gray-500 text-sm pb-1">
+      {{ page.date | date_to_string: "ordinal" }}
+    </p>
+    <p class="text-gray-600 pb-4 text-[17px] italic">{{ page.summary }}</p>
+    <p class="justify-self-start">{{ content }}</p>
+  </div>
+</div>
