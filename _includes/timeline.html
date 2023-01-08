@@ -1,9 +1,20 @@
+<style>
+  /* .ml-13 {
+    margin-left: 3.25rem;
+  } */
+  .ml-14 {
+    margin-left: 3.5rem;
+  }
+  /* .ml-15 {
+    margin-left: 3.75rem;
+  } */
+</style>
 <!-- Padding already done in margin bottom -->
 <div class="pt-6 sm:pt-5">
   <!-- Margin left 10 as the svgs below are shifted left 10  -->
   <ol class="relative border-l border-gray-200 ml-10">
     {% for item in site.data.timeline %}
-    <li class="mb-10 sm:ml-20 ml-16">
+    <li class="mb-10 sm:ml-20 ml-14">
       <a href="{{ item.link }}">
         <div class="flex flex-row items-center">
           <!-- Github svg is circular so looks much bigger -->
