@@ -4,8 +4,8 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-    "dev": "bundle exec jekyll serve --livereload",
-    "drafts": "bundle exec jekyll serve --livereload --drafts"
+    "dev": "bundle exec jekyll serve --livereload --incremental",
+    "drafts": "bundle exec jekyll serve --livereload --incremental --drafts"
   },
   "author": "",
   "license": "ISC",
