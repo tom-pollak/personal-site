@@ -24,8 +24,15 @@
   date: August 2020
   svg_path: assets/images/sans.svg
   svg_size: m
-- title: Lady Manners School
-  date: 2020
-  svg_path: assets/images/lms-logo.jpeg
-  svg_size: m
-  # description: "A-Level – Further Maths (A), Maths (A), Computer Science (A), Physics (A)"
+- title: Poker Web Application
+  link: "https://github.com/tom-pollak/web-poker"
+  date: April 2019 - July 2020
+  description: >-
+    Free live poker web app, written in Python and Django
+  svg_path: assets/images/github-mark.svg
+  svg_size: s
+# - title: Lady Manners School
+#   date: 2020
+#   svg_path: assets/images/lms-logo.jpeg
+#   svg_size: m
+#   description: "A-Level – Further Maths (A), Maths (A), Computer Science (A), Physics (A)"
