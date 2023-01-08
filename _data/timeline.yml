@@ -1,12 +1,10 @@
 - title: Cisco Meraki
   link: https://meraki.cisco.com/en-uk/
   date: July 2022 - September 2022
-  description:
-    - Implemented an Open AI clip derivative to develop an Natrual-Language-Processing
-      model that allowed users to search for any object in a video using a text box.
-    - Extended the current on-camera model detection pipeline to feed image "blobs" into the new model.
-    - The model produces embeddings indexable in with an Approximate-Nearest-Neighbor graph.
-    - Implemented in C++, using PyTorch and NCNN deep learning frameworks.
+  description: >-
+    Implemented a Natrual-Language-Processing model that allowed users to 
+    search for any object in a CCTV camera video using a text box.
+    Implemented in Pytorch & C++.
   svg_path: assets/images/meraki.svg
   svg_size: l
 - title: BEng Computer Science University of York
@@ -16,14 +14,12 @@
 - title: Automated Horse Betting
   link: "https://github.com/tom-pollak/each-way-matcher"
   date: December 2020 - July 2021
-  description:
-    - Discovers undervalued horses by the bookmaker in each-way betting.
-    - Uses a strategy that the bookmaker calculates the odds of a horse "placing" (1st, 2nd or 3rd) using only the win
-      odds of the that horse. This simplifies odds calculation for the bookies, but is not entirely accurate.
-    - The algorithm then uses an adapted Kelly Criterion strategy with Expected Growth to calculate the optimal stake.
+  description: >-
+    Developed a strategy that discovers and exploits undervalued horses in a 
+    horse race type called "each way".
   svg_path: assets/images/github-mark.svg
   svg_size: s
-- title: SANS Institute - FOR500 Windows Forensic Analysis
+- title: SANS Institute – FOR500 Windows Forensic Analysis
   link: https://www.sans.org/cyber-security-courses/windows-forensic-analysis
   date: August 2020
   svg_path: assets/images/sans.svg
@@ -32,3 +28,4 @@
   date: 2020
   svg_path: assets/images/lms-logo.jpeg
   svg_size: m
+  description: "A-Level – Further Maths (A), Maths (A), Computer Science (A), Physics (A)"
