@@ -7,6 +7,9 @@
 - name: my writings
   slug: /posts.html
   link: false
-- name: hire me!
+- name: contact
   slug: false
-  link: https://tom-pollak.github.io/cv/simple/2022-resume-tom.pdf
+  link: mailto:tompollak1000@gmail.com
+- name: hire me!
+  slug: /cv/simple/2023-resume-tom.pdf
+  link: false
