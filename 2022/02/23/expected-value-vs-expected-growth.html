@@ -10,9 +10,14 @@
   <body>
     
     <!-- centers header and posts  -->
-    <div class="sm:mt-16 mt-8 sm:mx-16 mx-4 mb-8 max-w-3xl">
-      <div class="grid justify-items-center">
-  <div class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left">
+    <div class="sm:mx-16 mx-4 mb-8 max-w-3xl">
+      
+<div class="mt-8">
+
+<div class="grid justify-items-center">
+  <div
+    class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left"
+  >
      <div>
   <h1 class="text-4xl text-gray-900 font-bold leading-tight">
     <a href="/">Tom Pollak</a>
@@ -92,19 +97,30 @@
   <!-- bit of a hack, I want the description to be centered wit the nav bar -->
   
 </div>
+
+</div>
  <div class="">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$']  ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script
+    type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  ></script>
   <hr />
   <div class="pt-4 grid justify-items-center">
     <h1 class="text-2xl text-gray-800 pb-0.5">Expected Value vs Expected Growth</h1>
     <p class="text-gray-500 text-sm pb-1">
       23rd Feb 2022
     </p>
-    <p class="text-gray-600 pb-4 text-[17px] italic"></p>
-    <p class="justify-self-start"><blockquote>
-  <p>If you wager your entire bankroll every time you place a bet, your bankroll will eventually be 0.</p>
-</blockquote>
-
-<h2 id="expected-value">Expected Value</h2>
+    <p class="text-gray-600 pb-4 text-[17px] italic">If you wager your entire bankroll every time you place a bet, your bankroll will eventually be 0.</p>
+  </div>
+  <article class="justify-self-start prose"><h2 id="expected-value">Expected Value</h2>
 
 <blockquote>
   <p>Expected value is the average amount we receive if we repeat a bet an infinite number of times.</p>
@@ -141,7 +157,7 @@ losing scenario, $x_i = -\frac{S}{B_0}$ as we just lose our stake.</p>
 ignores relative likelihoods on the different outcomes.</p>
 
 <blockquote>
-  <p>E.g. If a bet has a 0.0000001% likelihood but pays out 11,000,000% the expected value
+  <p>If a bet has a 0.0000001% likelihood but pays out 11,000,000% the expected value
 is 10%, but this is not an attractive bet for most people. You certainly wouldn’t
 expect a 10% return on your investment.</p>
 </blockquote>
@@ -188,8 +204,7 @@ single bet:</p>
 \[B^* = B_0 \times \prod\limits_i \left(1 + \frac{S(O_i -1)}{B_0} \right)^{P(x_i)}\]
 
 <p>Take me to <strong><a href="../3-way-kelly/">Part 2!</a></strong></p>
-</p>
-  </div>
+</article>
 </div>
 
     </div>

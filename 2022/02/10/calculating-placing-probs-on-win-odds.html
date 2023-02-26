@@ -10,9 +10,14 @@
   <body>
     
     <!-- centers header and posts  -->
-    <div class="sm:mt-16 mt-8 sm:mx-16 mx-4 mb-8 max-w-3xl">
-      <div class="grid justify-items-center">
-  <div class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left">
+    <div class="sm:mx-16 mx-4 mb-8 max-w-3xl">
+      
+<div class="mt-8">
+
+<div class="grid justify-items-center">
+  <div
+    class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left"
+  >
      <div>
   <h1 class="text-4xl text-gray-900 font-bold leading-tight">
     <a href="/">Tom Pollak</a>
@@ -92,7 +97,21 @@
   <!-- bit of a hack, I want the description to be centered wit the nav bar -->
   
 </div>
+
+</div>
  <div class="">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$']  ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script
+    type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  ></script>
   <hr />
   <div class="pt-4 grid justify-items-center">
     <h1 class="text-2xl text-gray-800 pb-0.5">Calculating Placing Probabilities on Win Odds</h1>
@@ -100,48 +119,23 @@
       10th Feb 2022
     </p>
     <p class="text-gray-600 pb-4 text-[17px] italic">Determining the probability of a horse placing 4th for extra places</p>
-    <p class="justify-self-start"><p>Using a group of horse’s win probabilities to determine the probability of a horse placing in a single position. This can be useful for comparing the odds for the race in different markets, where there could be potential for +EV bets in undervalued markets. Although the strategy is complete, I have yet to backtest it in any real markets so far.</p>
+  </div>
+  <article class="justify-self-start prose"><p>Using a group of horse’s win probabilities to determine the probability of a horse placing in a single position. This can be useful for comparing the odds for the race in different markets, where there could be potential for +EV bets in undervalued markets. Although the strategy is complete, I have yet to backtest it in any real markets so far.</p>
 
 <p>For any such horse in a race, the probability they will place in position $k$ is as follows:</p>
 
 \[P(X=k) = P(X = k\ |\ X \neq (1..k-1)) \times P(X \neq (1..k-1))\]
 
-<p>The algorithm to solve this recursively tries every combination of horse positions, the variable <code class="language-plaintext highlighter-rouge">neg_prob</code> to track the total probability left for all the horses in solution, and <code class="language-plaintext highlighter-rouge">cur_adj_factor</code>  keeps track of the probability of the solution actually happening.</p>
+<p>The algorithm to solve this recursively tries every combination of horse positions, the variable <code class="language-plaintext highlighter-rouge">neg_prob</code> to track the total probability left for all the horses in solution, and <code class="language-plaintext highlighter-rouge">cur_adj_factor</code> keeps track of the probability of the solution actually happening.</p>
 
 <p>To calculate the final horse probability for a given position, you must sum together every solution in which the horse finishes in that position.</p>
 
 <p>The algorithm has a time complexity of $P(h,n) = O\left(\frac{h!}{(h - n)!}\right)$ Where $h$ is the number of horses and $n$ is the number of places you want to calculate up to where $n \leq h$.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calc_places_prob</span><span class="p">(</span>
-	<span class="n">horses</span><span class="p">,</span>
-	<span class="n">cur_neg_prob</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-	<span class="n">cur_adj_factor</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-	<span class="n">included_r</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-	<span class="n">recursion_level</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<span class="p">):</span>
-	<span class="k">if</span> <span class="n">included_r</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-		<span class="n">included_r</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">recursion_level</span> <span class="o">+=</span> <span class="mi">1</span>
-	<span class="k">for</span> <span class="n">horse</span><span class="p">,</span> <span class="n">probabilities</span> <span class="ow">in</span> <span class="n">horses</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
-		<span class="n">prob</span> <span class="o">=</span> <span class="n">probabilities</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># The horse's original probability
-</span>		<span class="k">if</span> <span class="n">horse</span> <span class="ow">in</span> <span class="n">included_r</span><span class="p">:</span> <span class="c1"># A horse can only be in a solution once
-</span>			<span class="k">continue</span>
-
-		<span class="k">if</span> <span class="n">recursion_level</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-			<span class="n">horses</span><span class="p">[</span><span class="n">horse</span><span class="p">][</span><span class="n">recursion_level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">prob</span> <span class="o">*</span> <span class="n">cur_adj_factor</span>
-
-		<span class="k">if</span> <span class="n">recursion_level</span> <span class="o">&lt;</span> <span class="n">RELEVANT_PLACES</span><span class="p">:</span>
-			<span class="n">neg_prob</span> <span class="o">=</span> <span class="n">cur_neg_prob</span> <span class="o">-</span> <span class="n">prob</span>
-			<span class="n">adj_factor</span> <span class="o">=</span> <span class="n">cur_adj_factor</span> <span class="o">*</span> <span class="n">prob</span> <span class="o">/</span> <span class="n">neg_prob</span>
-			<span class="n">included_r</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">horse</span><span class="p">)</span>
-			<span class="n">horses</span> <span class="o">=</span> <span class="n">calc_places_prob</span><span class="p">(</span><span class="n">horses</span><span class="p">,</span> <span class="n">neg_prob</span><span class="p">,</span> <span class="n">adj_factor</span><span class="p">,</span> <span class="n">included_r</span><span class="p">,</span> <span class="n">recursion_level</span><span class="p">)</span>
-			<span class="n">included_r</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">horse</span><span class="p">)</span>
-	<span class="k">return</span> <span class="n">horses</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/tom-pollak/818f2d1dd21575bc7924bc44feb1d50d.js"></script>
 
 <p>Check out the whole project: <a href="https://github.com/tom-pollak/each-way-matcher">tom-pollak/each-way-matcher</a></p>
-</p>
-  </div>
+</article>
 </div>
 
     </div>

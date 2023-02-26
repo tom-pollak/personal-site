@@ -1,20 +1,16 @@
 module.exports = {
   content: [
-    './_drafts/**/*.html',
-    './_includes/**/*.html',
-    './_layouts/**/*.html',
-    './_posts/*.md',
-    './*.md',
-    './*.html',
-    // './**/*.html',
-    // './_site/**/*.html'
+    "./_drafts/**/*.html",
+    "./_includes/**/*.html",
+    "./_layouts/**/*.html",
+    "./_posts/*.md",
+    "./*.md",
+    "./*.html",
   ],
   theme: {
     theme: {
       extend: {},
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ]
-}
+  plugins: [require("@tailwindcss/typography")],
+};
