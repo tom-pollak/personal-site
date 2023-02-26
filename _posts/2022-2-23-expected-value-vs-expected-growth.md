@@ -1,9 +1,8 @@
 ---
 title: Expected Value vs Expected Growth
 layout: post
+summary: If you wager your entire bankroll every time you place a bet, your bankroll will eventually be 0.
 ---
-
-> If you wager your entire bankroll every time you place a bet, your bankroll will eventually be 0.
 
 ## Expected Value
 
@@ -39,7 +38,7 @@ This can be used as a performance metric for a bet – if one bet has an expecte
 5% and another 10% we would tend to prefer the latter to the former. However, this
 ignores relative likelihoods on the different outcomes.
 
-> E.g. If a bet has a 0.0000001% likelihood but pays out 11,000,000% the expected value
+> If a bet has a 0.0000001% likelihood but pays out 11,000,000% the expected value
 > is 10%, but this is not an attractive bet for most people. You certainly wouldn't
 > expect a 10% return on your investment.
 

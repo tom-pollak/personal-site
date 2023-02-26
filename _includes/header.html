@@ -1,9 +1,18 @@
+{% if site.data.portrait.whitelist contains page.url %}
+<div class="sm:mt-16 mt-8 ">
+{% else %}
+<div class="mt-8">
+{% endif %}
 <div class="grid justify-items-center">
-  <div class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left">
+  <div
+    class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left"
+  >
     {% if site.data.portrait.whitelist contains page.url %}
-      <div class="sm:pr-16 sm:pb-0 pb-5">{% include portrait.html %}</div>
+    <div class="sm:pr-16 sm:pb-0 pb-5">{% include portrait.html %}</div>
     {% endif %} {% include navigation.html %}
   </div>
   <!-- bit of a hack, I want the description to be centered wit the nav bar -->
   {% if page.url == "/" %} {% include description.html %} {% endif %}
+</div>
+
 </div>
