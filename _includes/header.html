@@ -5,11 +5,24 @@
       class="flex-grow-0 sm:flex place-items-center sm:pb-3 pb-6 grid justify-items-center sm:justify-items-left"
     >
       <div class="sm:pr-16 sm:pb-0 pb-5">{% include portrait.html %}</div>
-      {% include navigation.html %}
+      <div>
+        <h1 class="text-4xl text-gray-900 font-bold leading-tight">
+          <a href="/">Tom Pollak</a>
+        </h1>
+        <p class="text-gray-600 mb-2">
+          Studying Computer Science @ University of York
+        </p>
+        {% include navigation.html %}
+      </div>
     </div>
     {% include description.html %}
   </div>
 </div>
 {% else %}
-<div class="mt-8"></div>
+<div class="mt-8 pb-4">
+  <h1 class="text-4xl text-gray-900 font-bold leading-tight">
+    <a href="/">Tom Pollak</a>
+  </h1>
+  {% if page.url == "/posts.html" %} {% include navigation.html %} {% endif %}
+</div>
 {% endif %}
